@@ -28,7 +28,7 @@ class App extends Component {
         const { robots, searchfield } = this.state;
 
         const filteredRobots = robots.filter(robot => {
-            return robot.name.toLowerCase().includes(searchfield);
+            return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         });// membuat array baru yang properti name pada setiap elemennya mengandung string dari value input
 
         return !robots.length ? <h1 className='tc'>Loading</h1>:
